@@ -1,0 +1,33 @@
+[gd_scene format=2]
+
+[node name="Node" type="Node"]
+
+[node name="GUI" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="GUI"]
+
+[node name="Bars" type="VBoxContainer" parent="GUI/Tween"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Life Bar" type="HBoxContainer" parent="GUI/Tween/Bars"]
+margin_right = 40.0
+
+[node name="Energy Bar" type="HBoxContainer" parent="GUI/Tween/Bars"]
+margin_top = 4.0
+margin_right = 40.0
+margin_bottom = 4.0
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Dog" type="Node2D" parent="Characters"]
+
+[node name="Human" type="Node2D" parent="Characters"]
