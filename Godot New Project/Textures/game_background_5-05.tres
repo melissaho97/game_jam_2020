@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/game_background_5-05.png-150b810f8f53efa81a4fd5f3ec078216.stex"

@@ -18,6 +18,6 @@ _global_script_class_icons={
 config/name="GameJam"
 config/icon="res://icon.png"
 
-[rendering]
+[filesystem]
 
-environment/default_environment="res://default_env.tres"
+import/open_asset_import/use_fbx=false
