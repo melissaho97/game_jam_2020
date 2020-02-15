@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="Background" type="Sprite" parent="."]
+
+[node name="GUI" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="GUI"]
+
+[node name="Bars" type="VBoxContainer" parent="GUI"]
+margin_right = 105.0
+margin_bottom = 44.0
+
+[node name="LifeBar" type="HBoxContainer" parent="GUI/Bars"]
+margin_right = 105.0
+margin_bottom = 40.0
+
+[node name="Count" type="MarginContainer" parent="GUI/Bars/LifeBar"]
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+
+[node name="Background" type="NinePatchRect" parent="GUI/Bars/LifeBar/Count"]
+margin_right = 100.0
+margin_bottom = 53.0
+texture = SubResource( 1 )
+
+[node name="Number" type="Label" parent="GUI/Bars/LifeBar/Count/Background"]
+margin_left = 50.0
+margin_top = 6.31833
+margin_right = 91.0
+margin_bottom = 46.3183
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GUI/Bars/LifeBar/Count/Background"]
+margin_top = 6.0
+margin_right = 49.0
+margin_bottom = 46.0
+text = "HP"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="GUI/Bars/LifeBar"]
+margin_left = 104.0
+margin_right = 500.0
+margin_bottom = 53.0
+
+[node name="BankBar" type="HBoxContainer" parent="GUI/Bars"]
+margin_top = 44.0
+margin_right = 105.0
+margin_bottom = 44.0
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Dog" type="Node2D" parent="Characters"]
+
+[node name="Human" type="Node2D" parent="Characters"]
