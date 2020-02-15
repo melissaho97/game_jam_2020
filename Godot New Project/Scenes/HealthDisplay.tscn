@@ -1,17 +1,32 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://HealthBar.gd" type="Script" id=1]
 [ext_resource path="res://HealthDisplay.gd" type="Script" id=2]
-[ext_resource path="res://barHorizontal_green.png" type="Texture" id=3]
 [ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=4]
-[ext_resource path="res://assets/barHorizontal_red.png" type="Texture" id=5]
 [ext_resource path="res://Animations/game_character_girl-01.png" type="Texture" id=6]
 [ext_resource path="res://Textures/game_background_5-05.tres" type="Texture" id=7]
 [ext_resource path="res://Animations/game_dog_sad-02-03.png" type="Texture" id=8]
 [ext_resource path="res://Animations/game_dog-happy-01.png" type="Texture" id=9]
 [ext_resource path="res://assets/diagramHealthBar.png" type="Texture" id=10]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends TextureProgress
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 8 ) ],
 "loop": true,
@@ -19,7 +34,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
@@ -48,10 +63,8 @@ margin_left = 91.8717
 margin_top = 19.5456
 margin_right = 291.872
 margin_bottom = 48.5456
-texture_under = ExtResource( 5 )
-texture_over = ExtResource( 3 )
 nine_patch_stretch = true
-script = ExtResource( 1 )
+script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -73,9 +86,9 @@ __meta__ = {
 [node name="Dog" type="AnimatedSprite" parent="Node2D"]
 position = Vector2( 191.884, 457.589 )
 scale = Vector2( 0.0744452, 0.0744452 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 
 [node name="Owner" type="AnimatedSprite" parent="Node2D"]
 position = Vector2( 255.321, 351.126 )
 scale = Vector2( 0.128901, 0.128901 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
