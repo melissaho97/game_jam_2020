@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/bone.png" type="Texture" id=1]
+[ext_resource path="res://Bone.gd" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+bounce = 0.3
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 25.7962
+height = 89.9814
+
+[node name="Bone" type="RigidBody2D"]
+position = Vector2( 229.866, 169.478 )
+physics_material_override = SubResource( 1 )
+gravity_scale = 5.0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -1.94806 )
+rotation = 1.65806
+shape = SubResource( 2 )
