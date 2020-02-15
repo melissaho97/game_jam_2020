@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://HealthBar.gd" type="Script" id=1]
+[ext_resource path="res://HealthDisplay.gd" type="Script" id=2]
+[ext_resource path="res://barHorizontal_green.png" type="Texture" id=3]
+[ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=4]
+[ext_resource path="res://assets/barHorizontal_red.png" type="Texture" id=5]
+[ext_resource path="res://Animations/game_character_girl-01.png" type="Texture" id=6]
+[ext_resource path="res://Textures/game_background_5-05.tres" type="Texture" id=7]
+[ext_resource path="res://Animations/game_dog_sad-02-03.png" type="Texture" id=8]
+[ext_resource path="res://Animations/game_dog-happy-01.png" type="Texture" id=9]
+[ext_resource path="res://assets/diagramHealthBar.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="HealthDisplay" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 599.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar2" type="Node" parent="."]
+
+[node name="Bar" type="TextureProgress" parent="HealthBar2"]
+margin_left = 91.8717
+margin_top = 19.5456
+margin_right = 291.872
+margin_bottom = 48.5456
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 3 )
+nine_patch_stretch = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HealthBar2"]
+margin_left = 18.8717
+margin_top = 19.5456
+margin_right = 89.8717
+margin_bottom = 48.5456
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Dog" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 191.884, 457.589 )
+scale = Vector2( 0.0744452, 0.0744452 )
+frames = SubResource( 1 )
+
+[node name="Owner" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 255.321, 351.126 )
+scale = Vector2( 0.128901, 0.128901 )
+frames = SubResource( 2 )
