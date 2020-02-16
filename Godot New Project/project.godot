@@ -18,6 +18,11 @@ _global_script_class_icons={
 config/name="GameJam"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=720
+window/size/height=480
+
 [filesystem]
 
 import/open_asset_import/use_fbx=false
