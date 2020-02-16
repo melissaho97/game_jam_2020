@@ -1,12 +1,22 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=21 format=2]
 
+[ext_resource path="res://assets/barHorizontal_green.tres" type="Texture" id=1]
 [ext_resource path="res://HealthDisplay.gd" type="Script" id=2]
+[ext_resource path="res://assets/buttonOptions.png" type="Texture" id=3]
 [ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttonShop.png" type="Texture" id=5]
 [ext_resource path="res://Animations/game_character_girl-01.png" type="Texture" id=6]
 [ext_resource path="res://Textures/game_background_5-05.tres" type="Texture" id=7]
 [ext_resource path="res://Animations/game_dog_sad-02-03.png" type="Texture" id=8]
 [ext_resource path="res://Animations/game_dog-happy-01.png" type="Texture" id=9]
 [ext_resource path="res://assets/diagramHealthBar.png" type="Texture" id=10]
+[ext_resource path="res://assets/buttonHospitalsandGrooming.png" type="Texture" id=11]
+[ext_resource path="res://assets/buttonDinning.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttonMainBuilding.png" type="Texture" id=13]
+[ext_resource path="res://assets/buttonClose.png" type="Texture" id=14]
+[ext_resource path="res://assets/buttonPark.png" type="Texture" id=15]
+[ext_resource path="res://assets/barHorizontal_brown.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/OptionsBar.gd" type="Script" id=17]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureProgress
@@ -56,20 +66,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HealthBar2" type="Node" parent="."]
+[node name="HealthBar" type="Node" parent="."]
 
-[node name="Bar" type="TextureProgress" parent="HealthBar2"]
-margin_left = 91.8717
-margin_top = 19.5456
-margin_right = 291.872
-margin_bottom = 48.5456
-nine_patch_stretch = true
-script = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="HealthBar2"]
+[node name="TextureRect" type="TextureRect" parent="HealthBar"]
 margin_left = 18.8717
 margin_top = 19.5456
 margin_right = 89.8717
@@ -81,14 +80,97 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Bar" type="TextureProgress" parent="HealthBar"]
+margin_left = 91.8717
+margin_top = 19.5456
+margin_right = 291.872
+margin_bottom = 48.5456
+texture_under = ExtResource( 16 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Dog" type="AnimatedSprite" parent="Node2D"]
-position = Vector2( 191.884, 457.589 )
+[node name="CharactersObjects" type="Node2D" parent="."]
+
+[node name="Dog" type="AnimatedSprite" parent="CharactersObjects"]
+position = Vector2( 320, 448 )
 scale = Vector2( 0.0744452, 0.0744452 )
 frames = SubResource( 2 )
 
-[node name="Owner" type="AnimatedSprite" parent="Node2D"]
-position = Vector2( 255.321, 351.126 )
+[node name="Owner" type="AnimatedSprite" parent="CharactersObjects"]
+position = Vector2( 336, 368 )
 scale = Vector2( 0.128901, 0.128901 )
 frames = SubResource( 3 )
+
+[node name="OptionsBar" type="TextureButton" parent="."]
+margin_left = 24.0
+margin_top = 80.0
+margin_right = 72.0
+margin_bottom = 131.0
+texture_normal = ExtResource( 3 )
+expand = true
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dinning" type="TextureButton" parent="OptionsBar"]
+margin_left = 8.0
+margin_top = 64.0
+margin_right = 138.0
+margin_bottom = 104.0
+texture_normal = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainBuilding" type="TextureButton" parent="OptionsBar"]
+margin_left = 8.0
+margin_top = 112.0
+margin_right = 198.0
+margin_bottom = 152.0
+texture_normal = ExtResource( 13 )
+expand = true
+
+[node name="Park" type="TextureButton" parent="OptionsBar"]
+margin_left = 8.0
+margin_top = 160.0
+margin_right = 121.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 15 )
+expand = true
+
+[node name="HospitalandGrooming" type="TextureButton" parent="OptionsBar"]
+margin_left = 8.0
+margin_top = 208.0
+margin_right = 268.0
+margin_bottom = 248.0
+texture_normal = ExtResource( 11 )
+expand = true
+
+[node name="Shop" type="TextureButton" parent="OptionsBar"]
+margin_left = 11.0
+margin_top = 256.0
+margin_right = 128.0
+margin_bottom = 296.0
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="OptionsBar"]
+margin_left = 9.0
+margin_top = 304.0
+margin_right = 129.0
+margin_bottom = 344.0
+texture_normal = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="OptionsBar/Dinning" to="OptionsBar" method="_on_Dinning_pressed"]
