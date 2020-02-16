@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Textures/backgroundPettingandFeeding.tres" type="Texture" id=1]
+[ext_resource path="res://Animations/game_dog-happy-01.png" type="Texture" id=2]
+[ext_resource path="res://Animations/game_dog_sad-02-03.tres" type="Texture" id=3]
+[ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=4]
+[ext_resource path="res://Animations/game_character_petting1-07.png" type="Texture" id=5]
+[ext_resource path="res://Animations/game_character_petting2-08.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/PettingandEating.gd" type="Script" id=7]
+[ext_resource path="res://assets/bowl_empty.png" type="Texture" id=8]
+[ext_resource path="res://assets/bowl_full.png" type="Texture" id=9]
+[ext_resource path="res://assets/bowl_halfempty.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "actionPet",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "expressionDog",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "refillFood",
+"speed": 5.0
+} ]
+
+[node name="PettingandEating" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 720.0
+margin_bottom = 480.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Girl" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 448, 256 )
+scale = Vector2( 0.0391872, 0.0391872 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "actionPet"
+frame = 1
+speed_scale = 0.5
+playing = true
+
+[node name="Dog" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 400, 312 )
+scale = Vector2( 0.0820981, 0.0820981 )
+frames = SubResource( 2 )
+animation = "expressionDog"
+frame = 2
+speed_scale = 0.1
+playing = true
+
+[node name="Food" type="AnimatedSprite" parent="Characters"]
+position = Vector2( 264, 392 )
+scale = Vector2( 0.118464, 0.133181 )
+frames = SubResource( 3 )
+animation = "refillFood"
+frame = 2
+speed_scale = 0.08
+playing = true
