@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset.png-1cb8fb8e979168a6334adb51945e230a.stex"
+path="res://.import/tileset.png-a41ed8e3d71490a955e196a68bc8b99e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/tileset.png"
-dest_files=[ "res://.import/tileset.png-1cb8fb8e979168a6334adb51945e230a.stex" ]
+source_file="res://assets/DogWalking/tileset.png"
+dest_files=[ "res://.import/tileset.png-a41ed8e3d71490a955e196a68bc8b99e.stex" ]
 
 [params]
 

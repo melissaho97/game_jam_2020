@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Animations/hospital_background.jpg" type="Texture" id=1]
+[ext_resource path="res://Animations/hospital.png" type="Texture" id=2]
+[ext_resource path="res://Animations/Health_bar.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Animations/game_dog_sad-02-03.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="Hospital" type="Node2D"]
+
+[node name="hospital_background" type="Sprite" parent="."]
+position = Vector2( 359.546, 241.628 )
+scale = Vector2( 1.14649, 1.16178 )
+texture = ExtResource( 1 )
+
+[node name="hospital" type="Sprite" parent="."]
+position = Vector2( 77.5794, 63.2252 )
+scale = Vector2( 0.662694, 0.547916 )
+texture = ExtResource( 2 )
+
+[node name="Health_bar" type="Sprite" parent="."]
+position = Vector2( 632.026, 41.353 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 282.203
+margin_top = 50.1888
+margin_right = 433.203
+margin_bottom = 93.1888
+custom_fonts/font = SubResource( 1 )
+text = "Hair cut"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 283.257
+margin_top = 261.532
+margin_right = 434.257
+margin_bottom = 304.532
+custom_fonts/font = SubResource( 1 )
+text = "Surgery"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 261.121
+margin_top = 186.692
+margin_right = 457.121
+margin_bottom = 229.692
+custom_fonts/font = SubResource( 1 )
+text = "Vaccination"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 281.676
+margin_top = 116.596
+margin_right = 432.676
+margin_bottom = 159.596
+custom_fonts/font = SubResource( 1 )
+text = "Spa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="game_dog_sad-02-03" type="Sprite" parent="."]
+position = Vector2( 130.231, 318.466 )
+scale = Vector2( 0.111948, 0.0939361 )
+texture = ExtResource( 5 )

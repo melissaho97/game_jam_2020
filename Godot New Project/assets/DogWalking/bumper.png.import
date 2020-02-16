@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bumper.png-b1879245ab4dab8044f62650afe51967.stex"
+path="res://.import/bumper.png-1dc4958ee0c3d21ec0de13c4a088c779.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/bumper.png"
-dest_files=[ "res://.import/bumper.png-b1879245ab4dab8044f62650afe51967.stex" ]
+source_file="res://assets/DogWalking/bumper.png"
+dest_files=[ "res://.import/bumper.png-1dc4958ee0c3d21ec0de13c4a088c779.stex" ]
 
 [params]
 

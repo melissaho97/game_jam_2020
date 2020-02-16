@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rain.png-8665ea0f0c82d4dd63def9ac1976df59.stex"
+path="res://.import/rain.png-8c11071af51c636d553d9c6ea3d9bb5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/rain.png"
-dest_files=[ "res://.import/rain.png-8665ea0f0c82d4dd63def9ac1976df59.stex" ]
+source_file="res://assets/DogWalking/rain.png"
+dest_files=[ "res://.import/rain.png-8c11071af51c636d553d9c6ea3d9bb5a.stex" ]
 
 [params]
 

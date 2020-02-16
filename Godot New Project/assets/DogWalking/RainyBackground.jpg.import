@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RainyBackground.jpg-152d9ea9373784881980539e65d52ecb.stex"
+path="res://.import/RainyBackground.jpg-00f40016e79515ded56be50fee0c7c8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/RainyBackground.jpg"
-dest_files=[ "res://.import/RainyBackground.jpg-152d9ea9373784881980539e65d52ecb.stex" ]
+source_file="res://assets/DogWalking/RainyBackground.jpg"
+dest_files=[ "res://.import/RainyBackground.jpg-00f40016e79515ded56be50fee0c7c8c.stex" ]
 
 [params]
 

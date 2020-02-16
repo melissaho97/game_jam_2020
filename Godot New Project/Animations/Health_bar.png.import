@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerAndDog.png-d5317d50850e397447e900725dd3b756.stex"
+path="res://.import/Health_bar.png-d1b7f31db9c201f292044dfc8171b585.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/DogWalking/PlayerAndDog.png"
-dest_files=[ "res://.import/PlayerAndDog.png-d5317d50850e397447e900725dd3b756.stex" ]
+source_file="res://Animations/Health_bar.png"
+dest_files=[ "res://.import/Health_bar.png-d1b7f31db9c201f292044dfc8171b585.stex" ]
 
 [params]
 

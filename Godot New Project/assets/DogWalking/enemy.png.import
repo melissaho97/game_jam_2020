@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy.png-b25a8171705d9ce7154c8c01996d01df.stex"
+path="res://.import/enemy.png-cb6e39ea8c7d0fce32a5165408cb05ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/enemy.png"
-dest_files=[ "res://.import/enemy.png-b25a8171705d9ce7154c8c01996d01df.stex" ]
+source_file="res://assets/DogWalking/enemy.png"
+dest_files=[ "res://.import/enemy.png-cb6e39ea8c7d0fce32a5165408cb05ef.stex" ]
 
 [params]
 

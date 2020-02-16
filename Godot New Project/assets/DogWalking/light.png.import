@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light.png-2c4f7e26b710e8bc5e1c9853d78611c9.stex"
+path="res://.import/light.png-e608fa02778c836b80600f776379b045.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/light.png"
-dest_files=[ "res://.import/light.png-2c4f7e26b710e8bc5e1c9853d78611c9.stex" ]
+source_file="res://assets/DogWalking/light.png"
+dest_files=[ "res://.import/light.png-e608fa02778c836b80600f776379b045.stex" ]
 
 [params]
 

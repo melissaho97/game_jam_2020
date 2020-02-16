@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerAndDog.png-d5317d50850e397447e900725dd3b756.stex"
+path="res://.import/hospital_background.jpg-87c94e7a088e34a9a8afab3fbce61574.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/DogWalking/PlayerAndDog.png"
-dest_files=[ "res://.import/PlayerAndDog.png-d5317d50850e397447e900725dd3b756.stex" ]
+source_file="res://Animations/hospital_background.jpg"
+dest_files=[ "res://.import/hospital_background.jpg-87c94e7a088e34a9a8afab3fbce61574.stex" ]
 
 [params]
 

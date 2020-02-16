@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/glasgowuni_rainyday.png-5addbeb99e578cd33e44bcd1f0d7aed0.stex"
+path="res://.import/glasgowuni_rainyday.png-e912b1af24542b202f182cbcc7804077.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DogWalking/glasgowuni_rainyday.png"
-dest_files=[ "res://.import/glasgowuni_rainyday.png-5addbeb99e578cd33e44bcd1f0d7aed0.stex" ]
+source_file="res://assets/DogWalking/glasgowuni_rainyday.png"
+dest_files=[ "res://.import/glasgowuni_rainyday.png-e912b1af24542b202f182cbcc7804077.stex" ]
 
 [params]
 
