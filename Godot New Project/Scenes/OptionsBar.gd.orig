@@ -24,8 +24,12 @@ func _on_Dinning_pressed():
 	pass # Replace with function body.
 	
 func _on_MainBuilding_pressed():
+<<<<<<< HEAD
+	#get_tree().change_scene(res://Scenes/DogWalking/DogWalking.tscn)
+=======
 	#get_tree().change_scene("res://Scenes/DogWalking/DogWalking.tscn")
-	pass
+>>>>>>> Alex_Dog_Walking_Scene
+	pass # Replace with function body.
 
 func _on_Park_pressed():
 	#get_tree().change_scene(res://Scenes/.....)
