@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/barHorizontal_green.tres" type="Texture" id=1]
 [ext_resource path="res://HealthDisplay.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://assets/buttonPark.png" type="Texture" id=15]
 [ext_resource path="res://assets/barHorizontal_brown.png" type="Texture" id=16]
 [ext_resource path="res://Scenes/OptionsBar.gd" type="Script" id=17]
+[ext_resource path="res://Scenes/CharactersObjects.gd" type="Script" id=18]
+[ext_resource path="res://assets/bowl_halfempty.png" type="Texture" id=19]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureProgress
@@ -94,6 +96,7 @@ __meta__ = {
 }
 
 [node name="CharactersObjects" type="Node2D" parent="."]
+script = ExtResource( 18 )
 
 [node name="Dog" type="AnimatedSprite" parent="CharactersObjects"]
 position = Vector2( 320, 448 )
@@ -104,6 +107,17 @@ frames = SubResource( 2 )
 position = Vector2( 336, 368 )
 scale = Vector2( 0.128901, 0.128901 )
 frames = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="CharactersObjects"]
+margin_left = 288.0
+margin_top = 526.0
+margin_right = 368.0
+margin_bottom = 606.0
+texture_normal = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="OptionsBar" type="TextureButton" parent="."]
 margin_left = 24.0
@@ -135,6 +149,9 @@ margin_right = 198.0
 margin_bottom = 152.0
 texture_normal = ExtResource( 13 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Park" type="TextureButton" parent="OptionsBar"]
 margin_left = 8.0
@@ -173,4 +190,5 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="CharactersObjects/TextureButton" to="CharactersObjects" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="OptionsBar/Dinning" to="OptionsBar" method="_on_Dinning_pressed"]
