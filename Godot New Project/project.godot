@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GameJam"
+run/main_scene="res://Homepage.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -27,8 +28,3 @@ window/size/height=480
 
 quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
-
-[filesystem]
-
-import/open_asset_import/use_fbx=false
-
