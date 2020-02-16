@@ -4,7 +4,7 @@ extends Actor
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var Health: = 100
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta: float) -> void:
@@ -38,3 +38,7 @@ func calculate_move_velocity(
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _on_RainDetector_body_entered(body: Node) -> void:
+	if Health > 0:
+		Health -= 5

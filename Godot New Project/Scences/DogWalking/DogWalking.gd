@@ -8,6 +8,7 @@ export (PackedScene) var Raindrop
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$CanvasLayer/ProgressBar.value = 100
 	randomize()
 	$RainTimer.start()
 
@@ -19,3 +20,4 @@ func _on_RainTimer_timeout() -> void:
 	
 	raindrop.position = $RainSpawn/RaindropPosition.position
 	
+	$CanvasLayer/ProgressBar.value = get_node("Player").Health
