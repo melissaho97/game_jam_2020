@@ -1,10 +1,7 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var infoPopUpmenu
+var settingPopUpmenu
 var bar_red = preload("res://assets/barHorizontal_red.png")
 var bar_green = preload("res://assets/barHorizontal_green.png")
 var bar_yellow = preload("res://assets/barHorizontal_yellow.png")
@@ -32,6 +29,33 @@ func update_healthbar(value):
 	healthbar.value = value
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _ready2():
+	infoPopUpmenu = get_node("infoPopupMenu")
+	settingPopUpmenu = get_node("settingPopupMenu")
+	pass # Replace with function body.
+
+
+func _on_Dinning_pressed():
+	#get_tree().change_scene(res://Scenes/.....)
+	pass # Replace with function body.
+	
+func _on_MainBuilding_pressed():
+	#get_tree().change_scene(res://Scenes/DogWalking/DogWalking.tscn)
+	pass # Replace with function body.
+
+func _on_Park_pressed():
+	#get_tree().change_scene(res://Scenes/.....)
+	pass # Replace with function body.
+	
+func _on_HospitalandGrooming_pressed():
+	#get_tree().change_scene(res://Scenes/.....)
+	pass # Replace with function body.
+
+func _on_Shop_pressed():
+	#get_tree().change_scene(res://Scenes/.....)
+	pass # Replace with function body.
+
+func _on_Close_pressed():
+	infoPopUpmenu.hide()
+	settingPopUpmenu.hide()
+	pass # Replace with function body.

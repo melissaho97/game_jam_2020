@@ -2,23 +2,22 @@
 
 [ext_resource path="res://assets/barHorizontal_green.tres" type="Texture" id=1]
 [ext_resource path="res://HealthDisplay.gd" type="Script" id=2]
-[ext_resource path="res://assets/buttonOptions.png" type="Texture" id=3]
-[ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttonHospitalsandGrooming.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/CharactersObjects.gd" type="Script" id=4]
 [ext_resource path="res://assets/buttonShop.png" type="Texture" id=5]
-[ext_resource path="res://Animations/game_character_girl-01.png" type="Texture" id=6]
-[ext_resource path="res://Textures/game_background_5-05.tres" type="Texture" id=7]
-[ext_resource path="res://Animations/game_dog_sad-02-03.tres" type="Texture" id=8]
-[ext_resource path="res://Animations/game_dog-happy-01.tres" type="Texture" id=9]
-[ext_resource path="res://assets/diagramHealthBar.png" type="Texture" id=10]
-[ext_resource path="res://assets/buttonHospitalsandGrooming.png" type="Texture" id=11]
-[ext_resource path="res://assets/buttonDinning.png" type="Texture" id=12]
-[ext_resource path="res://assets/buttonMainBuilding.png" type="Texture" id=13]
-[ext_resource path="res://assets/buttonClose.png" type="Texture" id=14]
-[ext_resource path="res://assets/buttonPark.png" type="Texture" id=15]
-[ext_resource path="res://assets/barHorizontal_brown.png" type="Texture" id=16]
-[ext_resource path="res://Scenes/OptionsBar.gd" type="Script" id=17]
-[ext_resource path="res://Scenes/CharactersObjects.gd" type="Script" id=18]
-[ext_resource path="res://assets/bowl_halfempty.png" type="Texture" id=19]
+[ext_resource path="res://assets/buttonOptions.png" type="Texture" id=6]
+[ext_resource path="res://assets/barHorizontal_brown.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttonDinning.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttonClose.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttonMainBuilding.png" type="Texture" id=10]
+[ext_resource path="res://Animations/game_dog_sad-02-03.tres" type="Texture" id=11]
+[ext_resource path="res://Animations/game_dog-happy-01.tres" type="Texture" id=12]
+[ext_resource path="res://assets/buttonPark.png" type="Texture" id=13]
+[ext_resource path="res://assets/bowl_halfempty.png" type="Texture" id=14]
+[ext_resource path="res://Animations/game_dog-neutral-01-02.png" type="Texture" id=15]
+[ext_resource path="res://Animations/game_character_girl-01.png" type="Texture" id=16]
+[ext_resource path="res://Textures/game_background_5-05.tres" type="Texture" id=17]
+[ext_resource path="res://assets/diagramHealthBar.png" type="Texture" id=18]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureProgress
@@ -40,7 +39,7 @@ func _ready():
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 15 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -48,13 +47,15 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[node name="HealthDisplay" type="Node2D"]
+[sub_resource type="GDScript" id=4]
+
+[node name="HouseDisplay" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -62,7 +63,7 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = 1024.0
 margin_bottom = 599.0
-texture = ExtResource( 7 )
+texture = ExtResource( 17 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -75,7 +76,7 @@ margin_left = 18.8717
 margin_top = 19.5456
 margin_right = 89.8717
 margin_bottom = 48.5456
-texture = ExtResource( 10 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 1
 __meta__ = {
@@ -87,7 +88,7 @@ margin_left = 91.8717
 margin_top = 19.5456
 margin_right = 291.872
 margin_bottom = 48.5456
-texture_under = ExtResource( 16 )
+texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
 script = SubResource( 1 )
@@ -96,7 +97,7 @@ __meta__ = {
 }
 
 [node name="CharactersObjects" type="Node2D" parent="."]
-script = ExtResource( 18 )
+script = ExtResource( 4 )
 
 [node name="Dog" type="AnimatedSprite" parent="CharactersObjects"]
 position = Vector2( 320, 448 )
@@ -113,7 +114,7 @@ margin_left = 288.0
 margin_top = 526.0
 margin_right = 368.0
 margin_bottom = 606.0
-texture_normal = ExtResource( 19 )
+texture_normal = ExtResource( 14 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -124,9 +125,9 @@ margin_left = 24.0
 margin_top = 80.0
 margin_right = 72.0
 margin_bottom = 131.0
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 6 )
 expand = true
-script = ExtResource( 17 )
+script = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -136,7 +137,7 @@ margin_left = 8.0
 margin_top = 64.0
 margin_right = 138.0
 margin_bottom = 104.0
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 8 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -147,7 +148,7 @@ margin_left = 8.0
 margin_top = 112.0
 margin_right = 198.0
 margin_bottom = 152.0
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 10 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,7 +159,7 @@ margin_left = 8.0
 margin_top = 160.0
 margin_right = 121.0
 margin_bottom = 200.0
-texture_normal = ExtResource( 15 )
+texture_normal = ExtResource( 13 )
 expand = true
 
 [node name="HospitalandGrooming" type="TextureButton" parent="OptionsBar"]
@@ -166,7 +167,7 @@ margin_left = 8.0
 margin_top = 208.0
 margin_right = 268.0
 margin_bottom = 248.0
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 3 )
 expand = true
 
 [node name="Shop" type="TextureButton" parent="OptionsBar"]
@@ -185,7 +186,7 @@ margin_left = 9.0
 margin_top = 304.0
 margin_right = 129.0
 margin_bottom = 344.0
-texture_normal = ExtResource( 14 )
+texture_normal = ExtResource( 9 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

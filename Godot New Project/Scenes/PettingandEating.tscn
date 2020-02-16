@@ -55,6 +55,7 @@ scale = Vector2( 0.0391872, 0.0391872 )
 z_index = 1
 frames = SubResource( 1 )
 animation = "actionPet"
+frame = 1
 speed_scale = 0.5
 playing = true
 
