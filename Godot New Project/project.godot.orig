@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://Scences/DogWalking/Actors/Actor.gd"
+"path": "res://Scenes/DogWalking/Actors/Actor.gd"
 } ]
 _global_script_class_icons={
 "Actor": ""
@@ -21,10 +21,13 @@ _global_script_class_icons={
 [application]
 
 config/name="GameJam"
-run/main_scene="res://Scences/DogWalking/Actors/PlayerAndDog.tscn"
+<<<<<<< HEAD
+run/main_scene="res://Scenes/DogWalking/Actors/PlayerAndDog.tscn"
+=======
+run/main_scene="res://Scenes/House.tscn"
+>>>>>>> angela
 config/icon="res://icon.png"
 
-<<<<<<< HEAD
 [input]
 
 move_left={
@@ -54,10 +57,3 @@ move_down={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="coins"
 2d_physics/layer_4="world"
-
-[rendering]
-=======
-[filesystem]
->>>>>>> master
-
-import/open_asset_import/use_fbx=false
