@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Node" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 245.547
+margin_top = 207.77
+margin_right = 285.547
+margin_bottom = 221.77
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "try"
+__meta__ = {
+"_edit_use_anchors_": false
+}
