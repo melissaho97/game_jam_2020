@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GameJam"
-run/main_scene="res://HouseDisplay.tscn"
+run/main_scene="res://Scenes/DogWalking/Actors/PlayerAndDog.tscn"
 config/icon="res://icon.png"
 
 [input]
