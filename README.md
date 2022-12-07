@@ -1,4 +1,4 @@
-# The Miricle - Dog Raising Mini Game
+# The Miricle - Raising Puppy Mini Game
 
 By:
 Aleksandr Boldin, Angela Ng, Antoniuous Clarence, Irene Lin, Melissa Ho
